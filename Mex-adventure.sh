@@ -77,7 +77,15 @@ echo -e "   Will you walk deep into the cave to see why there is so much noise? 
 read answer
 if [ $answer = "y" -o $answer = "Y" ]
 then 
-echo -e "   After walk a while you find a big box with a platinum armor, a fire bow and a power ring"
+echo -e "   After walk a while you find a big box with a platinum armor and a power ring"
+choice
+else
+echo
+echo "   You go back to home because you are so tired."
+exit
+fi
+}
+choice() {
 echo
 echo -e "   You only can choose one, so what is your election?...
 Platinum armor (a)
@@ -86,35 +94,60 @@ Enter your choice (a/b) --> \c"
 read answer
 if [ $answer = "a" -o $answer = "A" ]
 then 
-echo -e "   The armor gives a boost to your strenght so you can now use the sword with more agility. "
-dragon 1
+echo -e "   The armor gives a boost to your strenght so you can now use the sword with more agility."
+echo
+echo -e " But"
+echo
+echo -e "   You see something big that entry to the cave so you try to escape"
+echo
+dragon1
 else
 echo
 echo -e "   With the ring you can insta-kill any monster but each time that you use the ring, the ring take a part of your life until you died."
-dragon 2
+echo
+echo -e "   You walk for a while but you see something big that entry to the cave so you try to escape."
+echo
+echo
+echo -e "  You hide behind a rock and you saw a big green dragon."
+echo
+dragon2
 fi
 }
 # dragon functions
-dragon 1() {
+dragon1() {
 echo -e "  When you tried to get out of the cave a dragon block the cave entrance..."
+echo
 echo -e "  Fight? (y/n) --> \c"
 read answer 
 if [ $answer = "y" -o $answer = "Y" ]
 then 
 echo -e "  With the armor and the sword you are so powerfull and you are more faster than the dragon, but the dragon has a hard skin more than the iron, but after hour of fight you defeat the dragon"
+echo
+echo
 end 
 else 
 echo
 echo -e "  You hide behind a rock. After a while you tried to escape but the dragon sees you and poisons you with his breath... You Died!"
-dragon 1
+echo
+echo
+echo
+echo
+dragon1
 fi 
 }
-dragon 2() {
+dragon2() {
 echo -e "  You use the ring to kill the dragon, but the dragon has too many life so you need to use the ring more times. After use the ring 5 times the dragon died but you too... You Died!"
+echo
+echo
+echo
+echo
+echo
 cave
 }
 end() {
+echo
 echo -e "   After defeat the dragon you walk to the exit, but the dead body of the dragon expels poisonous gas so you have to run left or right"
+echo
 echo -e "   Right or left?
 Right (r)
 Left (l)
@@ -123,10 +156,18 @@ read answer
 if [ $answer = "r" -o $answer = "R" ]
 then 
 echo -e "   In the right side of the cave a big spider bites you and after 2 minutes you died..."
+echo
+echo
+echo
 end
-elif [ @answer = "l" -o $answer = "L" ]
-then
+else
 echo -e "   In the left side you find a tunel where you escape... You survive!"
+echo
+echo
+echo
+echo -e " CONGRATULATIONS!!!"
+echo
+echo
 echo
 fi
 }
