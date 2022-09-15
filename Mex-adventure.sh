@@ -1,11 +1,12 @@
 #!/bin/bash 
 echo
-echo
-echo
-echo "      Welcome traveler to MEX-ADVENTURE      "
-echo
-echo
-echo
+echo "  ___________________________________________________________________  "
+echo " |                                                                   | "
+echo " |                                                                   | "
+echo " |                   Welcome traveler to MEX-ADVENTURE!!!            | "
+echo " |                                                                   | "
+echo " |                                                                   | "
+echo "  -------------------------------------------------------------------  "
 echo
 function begin() {
 echo "  Your adventure start in a river front a big tree...  "
